@@ -1,0 +1,1278 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPER - Caffe Perpustakaan Unigal</title>
+  <meta name="description" content="CAPER adalah café dan UMKM yang menjual berbagai minuman dan makanan ringan di belakang perpustakaan universitas. Nikmati suasana nyaman dengan harga terjangkau.">
+  <meta name="keywords" content="caper, caffe perpustakaan, umkm, makanan ringan, minuman, kopi, tea jus, mie kuah, ciamis">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CAPER - Caffe Perpustakaan Unigal">
+  <meta property="og:description" content="CAPER adalah café dan UMKM yang menjual berbagai minuman dan makanan ringan di belakang perpustakaan universitas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- 
+  <link rel="stylesheet" href="css/style.css"> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: #ffffff;
+    }
+
+    .hero-section {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('../assets/images/img_image_1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 42px 16px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 142px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 50px;              
+      left: 50px;             
+      right: 50px;            
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(152, 37, 152, 0.5);
+      border-radius: 30px;
+      padding: 15px 50px;
+      box-shadow: 0px 4px 4px rgba(136, 136, 136, 1);
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+    }
+
+    .logo-text {
+      margin-left: 45px;
+      font-size: 20px;
+      font-family: Poppins;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: left;
+      text-transform: uppercase;
+      color: #f1e9e9;
+      margin-bottom: 4px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-end;
+      width: 48%;
+    }
+
+    .nav-menu {
+      margin-right: -380px;
+      display: none;
+      flex-direction: row;
+      gap: 36px;
+      justify-content: flex-start;
+      align-items: center;
+      width: auto;
+    }
+
+    .nav-item {
+      font-size: 15px;
+      font-family: Poppins;
+      font-weight: 500;
+      line-height: 23px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #f1e9e9;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-item.active {
+      color: #ffb2ff;
+    }
+
+    .nav-item:hover {
+      color: #ffb2ff;
+    }
+
+    .hamburger {
+      display: block;
+      background: none;
+      border: none;
+      color: #f1e9e9;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Hero text content */
+    .hero-text-section {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      margin: 0 16px;
+    }
+
+    .hero-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;   
+      align-items: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      padding-top: 400px;
+      margin-left: -200px;
+    }
+
+    .hero-title {
+      font-size: 18px;
+      font-family: Poppins;
+      font-weight: 600;
+      line-height: 27px;
+      text-align: left;
+      text-transform: capitalize;
+      color: #ffffff;
+      width: auto;
+    }
+
+    .hero-description {
+      font-size: 16px;
+      font-family: Poppins;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #ffffff;
+      width: 100%;
+    }
+
+    .hero-button {
+      font-size: 12px;
+      font-family: Poppins;
+      font-weight: 600;
+      line-height: 18px;
+      text-align: left;
+      text-transform: capitalize;
+      color: #982598;
+      background-color: #f1e9e9;
+      border: none;
+      border-radius: 0px 20px 20px 20px;
+      padding: 8px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: auto;
+      margin-left: -200px;
+    }
+
+    .hero-button:hover {
+      background-color: #e5d9d9;
+      transform: scale(1.05);
+    }
+
+    /* Section backgrounds */
+    .section-with-bg {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 72px 16px;
+    }
+
+    .about-section {
+      background-image: url('../assets/images/img_hero_image.png');
+    }
+
+    .history-section {
+      background-image: url('../assets/images/img_hero_image_720x1279.png');
+      padding: 56px 16px;
+      margin-top: 60px;
+    }
+
+    .menu-section {
+      background-image: url('../assets/images/img_hero_image_721x1284.png');
+      padding: 54px 16px;
+    }
+
+    /* Content sections */
+    .section-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 120px;
+      padding: 0 56px;
+    }
+
+    .about-layout {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: 48px;
+    }
+
+    .decorative-dots {
+      display: flex;
+      flex-direction: column;
+      gap: 332px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-self: flex-end;
+      width: auto;
+    }
+
+    .dot-small {
+      width: 8px;
+      height: 8px;
+      background-color: #e491c9;
+      border-radius: 4px;
+    }
+
+    .dot-large {
+      width: 16px;
+      height: 16px;
+      background-color: #15173d;
+      border-radius: 8px;
+    }
+
+    .about-main-content {
+        display: flex;
+      flex-direction: column;
+      gap: 48px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      padding: 0 8px;
+    }
+
+    .about-images-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 24px;
+    }
+
+    .about-images {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
+
+    .about-image-main {
+      width: 280px;
+      height: 284px;
+      border-radius: 176px;
+      object-fit: cover;
+    }
+
+    .about-image-overlay {
+      width: 140px;
+      height: 140px;
+      border-radius: 88px;
+      object-fit: cover;
+      position: absolute;
+      top: -20px;
+      right: 20px;
+    }
+
+    .about-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-family: Poppins;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      text-transform: capitalize;
+      color: #15173d;
+      width: auto;
+    }
+
+    .section-description {
+      font-size: 12px;
+      font-family: Poppins;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      color: #000000;
+      width: 100%;
+    }
+
+    /* Promotional sections */
+    .promo-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      background-color: #f1e9e9;
+      padding: 30px 16px;
+    }
+
+    .promo-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 24px;
+    }
+
+    .promo-image-left, .promo-image-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        position: relative;
+    }
+
+    .promo-text {
+        font-size: 16px;
+        font-family: Poppins;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        color: #15173d;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* History section */
+    .history-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .history-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 54px;
+        padding: 0 28px;
+    }
+
+    .history-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100%;
+        gap: 72px;
+        padding: 0 8px;
+    }
+
+    .history-text-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .history-text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .history-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 220px 0px 220px 0px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    /* Menu section */
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 1072px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+
+    .menu-title {
+        font-size: 20px;
+        font-family: Poppins;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #15173d;
+        margin-bottom: 86px;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .menu-image {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+        object-fit: cover;
+        margin-bottom: -48px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-image: url('../assets/images/img_group_1.svg');
+        background-size: cover;
+        background-position: center;
+        padding: 60px 14px 14px 14px;
+        border-radius: 0 0 20px 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .menu-name {
+        font-size: 12px;
+        font-family: Poppins;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+        color: #12418c;
+        margin-bottom: 12px;
+    }
+
+    .menu-button {
+        font-size: 12px;
+        font-family: Poppins;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #f1e9e9;
+        background-color: #982598;
+        border: none;
+        border-radius: 0px 18px 18px 18px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .menu-button:hover {
+        background-color: #7a1d7a;
+        transform: scale(1.05);
+    }
+
+    .menu-scroll-button {
+        font-size: 12px;
+        font-family: Poppins;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #f1e9e9;
+        background-color: rgba(255, 183, 0, 0.74);
+        border: none;
+        border-radius: 0px 18px 18px 18px;
+        padding: 6px 12px;
+        cursor: pointer;
+        align-self: flex-end;
+        margin-top: 32px;
+    }
+
+    /* Location section */
+    .location-section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        background-color: #f5f5f5;
+        padding: 34px 16px;
+    }
+
+    .location-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 1072px;
+        gap: 18px;
+    }
+
+    .location-info {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        background-color: rgba(152, 37, 152, 0.56);
+        border-radius: 20px;
+        padding: 18px 12px;
+        box-shadow: 0px 4px 4px rgba(136, 136, 136, 1);
+    }
+
+    .info-title {
+        font-size: 16px;
+        font-family: Poppins;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #000000;
+        margin-left: 12px;
+        margin-top: 18px;
+    }
+
+    .info-text {
+        font-size: 12px;
+        font-family: Poppins;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #000000;
+        margin-left: 12px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        width: 100%;
+    }
+
+    .map-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .map-title {
+        font-size: 20px;
+        font-family: Poppins;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #15173d;
+        margin-left: 38px;
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        border-radius: 46px;
+        align-self: flex-end;
+    }
+
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 16px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1072px;
+        gap: 16px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .footer-logo {
+        font-size: 18px;
+        font-family: Poppins;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #982598;
+    }
+
+    .footer-nav-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    .footer-nav-text {
+        font-size: 12px;
+        font-family: Poppins;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #15173d;
+    }
+
+    .footer-line {
+        width: 2px;
+        height: 2px;
+        background-color: #ffb700;
+    }
+
+    .footer-social {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #15173d;
+        padding: 6px;
+    }
+
+    .footer-copyright {
+        font-size: 8px;
+        font-family: Poppins;
+        font-weight: 500;
+        line-height: 12px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #ffffff;
+        align-self: flex-start;
+        margin-bottom: 4px;
+    }
+
+    /* Interactive states */
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    button:active {
+        transform: translateY(0);
+    }
+
+    .nav-item:focus {
+        outline: 2px solid #ffb2ff;
+        outline-offset: 2px;
+    }
+
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+        .hero-title {
+        font-size: 20px;
+        line-height: 30px;
+        }
+
+        .hero-description {
+        font-size: 14px;
+        line-height: 21px;
+        width: 80%;
+        }
+
+        .hero-button {
+        font-size: 14px;
+        line-height: 21px;
+        padding: 10px 30px;
+        }
+
+        .section-title {
+        font-size: 22px;
+        line-height: 33px;
+        }
+
+        .section-description {
+        font-size: 14px;
+        line-height: 21px;
+        width: 90%;
+        }
+
+        .promo-text {
+        font-size: 18px;
+        line-height: 27px;
+        }
+
+        .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        }
+
+        .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-images-text {
+        flex-direction: row;
+        gap: 48px;
+        }
+
+        .about-images {
+        width: 40%;
+        }
+
+        .about-text-content {
+        width: 58%;
+        }
+
+        .promo-content {
+        flex-direction: row;
+        justify-content: space-between;
+        }
+
+        .promo-text {
+        width: 46%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .hamburger {
+        display: none;
+        }
+
+        .nav-menu {
+        display: flex;
+        }
+
+        .hero-section {
+        padding: 42px 42px;
+        }
+
+        .hero-title {
+        font-size: 24px;
+        line-height: 36px;
+        }
+
+        .hero-description {
+        width: 56%;
+        }
+
+        .section-title {
+        font-size: 24px;
+        line-height: 36px;
+        }
+
+        .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        }
+
+        .map-iframe {
+        height: 400px;
+        }
+
+        .footer-nav {
+        flex-direction: row;
+        gap: 32px;
+        }
+
+        .footer-nav-text {
+        font-size: 14px;
+        line-height: 21px;
+        }
+
+        .footer-copyright {
+        font-size: 9px;
+        line-height: 14px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+        }
+
+        .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        }
+
+        .location-info {
+        flex-direction: row;
+        gap: 48px;
+        }
+
+        .map-section {
+        width: 100%;
+        }
+
+        .footer-logo {
+        font-size: 20px;
+        line-height: 30px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .hero-section {
+        padding: 42px 56px;
+        }
+
+        .section-with-bg {
+        padding: 72px 56px;
+        }
+    }
+  </style>
+
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcapercafe4084back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.17"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  </head>
+
+<body>
+  <main class="main-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="logo">
+            <h1 class="logo-text">caper</h1>
+          </div>
+          
+          <nav class="nav-container">
+            <button class="hamburger" aria-label="Menu">☰</button>
+            <div class="nav-menu">
+              <a href="#home" class="nav-item active">Beranda</a>
+              <a href="#tentang" class="nav-item">Tentang</a>
+              <a href="#sejarah" class="nav-item">Sejarah</a>
+              <a href="#menu" class="nav-item">Menu</a>
+              <!-- <a href="#lokasi" class="nav-item">Lokasi & Kontak</a> -->
+            </div>
+          </nav>
+        </header>
+
+        <!-- Hero Text Content -->
+        <div class="hero-text-section">
+          <div class="hero-text-content">
+            <h2 class="hero-title">Caffe Perpustakaan (CAPER)</h2>
+            <p class="hero-description">CAPER adalah UMKM yang menjual berbagai minuman dan makanan ringan yang dikelola oleh Ang Rendy. UMKM ini berlokasi dibelakang perpustakaan universitas yang menjadi daya tarik para mahasiswa untuk bersantai disini sambil mengerjakan tugas atau sekedar membaca buku.</p>
+          </div>
+          <button class="hero-button">lihat selengkapnya</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-with-bg about-section" id="tentang">
+      <div class="section-content">
+        <div class="about-content">
+          <div class="about-layout">
+            <div class="decorative-dots">
+              <div class="dot-small"></div>
+              <div class="dot-large"></div>
+            </div>
+            
+            <div class="about-main-content">
+              <div class="about-images-text">
+                <div class="about-images">
+                  <img src="../assets/images/img_whatsapp_image_2026_02_06.png" alt="CAPER café interior showing food preparation area" class="about-image-main">
+                  <img src="../assets/images/img_whatsapp_image_2026_02_06_178x178.png" alt="Close-up of CAPER café setup" class="about-image-overlay">
+                  <div class="dot-large" style="position: absolute; bottom: -58px; right: 14px;"></div>
+                </div>
+                
+                <div class="about-text-content">
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <h2 class="section-title">TENTANG</h2>
+                    <div style="width: 4px; height: 4px; background-color: #ffb700; margin-left: 54px;"></div>
+                  </div>
+                  <p class="section-description">UMKM Ang Randy yang bergerak di bidang makanan dan minuman sejak tahun 2024. Usaha ini sebelumnya bernama Caper Unigal dan berlokasi di belakang perpustaka universitas galuh. Produk yang dijual meliputi makanan ringan seperti chiki, roti, lemper, risol, kelepon, dan ada juga berbagai minuman dingin seperti kopi good day, tea jus, es chocholatos, marimas mangga, marimas jeruk, dan masih banyak jajanan lainnya.
+
+Dalam operasionalnya, UMKM ini masih menghadapi kendala seperti pencatatan penjualan, pengelolaan stok, promosi, serta pemesanan yang masih dilakukan secara manual. Oleh karena itu, diperlukan sistem informasi berbasis digital untuk membantu pengelolaan data, transaksi, promosi, dan pemesanan online agar usaha dapat berjalan lebih efektif dan berkembang secara berkelanjutan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-section">
+      <div class="promo-content">
+        <div class="promo-image-left">
+          <img src="../assets/images/img_whatsapp_image_2026_02_07.png" alt="CAPER promotional food image" style="width: 190px; height: 212px;">
+          <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%; margin-top: -40px;">
+            <img src="../assets/images/img_unsplash_8q_crktuyky.png" alt="Food item close-up" style="width: 88px; height: 76px; margin-bottom: 24px;">
+            <img src="../assets/images/img_whatsapp_image_2026_02_07_160x130.png" alt="Another food item" style="width: 130px; height: 160px; margin-left: -52px;">
+          </div>
+        </div>
+        
+        <p class="promo-text">Ayo segera kunjungi caffe kami, dengan harga makanan dan minuman yang terjangkau dan suasana caffe yang adem, sangat nyaman untuk bersantai</p>
+        
+        <div class="promo-image-right">
+          <img src="../assets/images/img_whatsapp_image_2026_02_07_136x204.png" alt="CAPER café atmosphere" style="width: 204px; height: 136px;">
+          <img src="../assets/images/img_whatsapp_image_2026_02_07_198x146.png" alt="Food and drinks display" style="width: 146px; height: 198px; position: absolute; bottom: 0; right: 0;">
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="section-with-bg history-section" id="sejarah">
+      <div class="section-content">
+        <div class="history-content">
+          <div class="history-layout">
+            <div class="history-main">
+              <div class="history-text-section">
+                <div class="history-text-content">
+                  <h2 class="section-title">SEJARAH</h2>
+                  <p class="section-description">UMKM Ang Randy mulai berkembang pada tahun 2024. sekarang usaha ini bernama CAPER Unigal, namun direncanakan ingin mengganti nama agar lebih sesuai dengan identitas usaha. UMKM ini dijalankan bersama beberapa rekan dan berlokasi di sekitar kampus unigal. 
+
+Pada awal berdirinya, pengelolaan usaha masih sederhana dan terus mengalami proses pengembangan. diceritakan juga UMKM ini sempat tutup beberapa bulan dikarenakan kehabisan stock bahan baku, dan mulai dibuka kembali kemarin bulan agustus tahun 2025 dan masih beroprasi sampai sekarang.</p>
+                </div>
+                <div class="dot-small" style="margin-top: 24px;"></div>
+              </div>
+              <div class="dot-large"></div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 72px; align-items: flex-end;">
+              <div style="display: flex; align-items: flex-start; gap: 16px;">
+                <div class="dot-large" style="background-color: #c9bed4;"></div>
+                <img src="../assets/images/img_whatsapp_image_2026_02_06_456x442.png" alt="Historical photo of CAPER café owner" class="history-image" style="margin-left: -4px;">
+              </div>
+              <div class="dot-large" style="background-color: #982598; margin-right: 130px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotional Section 2 -->
+    <section class="promo-section">
+      <div class="promo-content">
+        <div class="promo-image-left">
+          <img src="../assets/images/img_whatsapp_image_2026_02_07.png" alt="CAPER promotional food image" style="width: 190px; height: 212px;">
+          <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%; margin-top: -40px;">
+            <img src="../assets/images/img_unsplash_8q_crktuyky.png" alt="Food item close-up" style="width: 88px; height: 76px; margin-bottom: 24px;">
+            <img src="../assets/images/img_whatsapp_image_2026_02_07_160x130.png" alt="Another food item" style="width: 130px; height: 160px; margin-left: -52px;">
+          </div>
+        </div>
+        
+        <p class="promo-text">Nikmati Setiap Rasa, Dalam Setiap Momen  Lezatnya makanan & segarnya minuman, siap menemani harimu dengan penuh rasa.</p>
+        
+        <div class="promo-image-right">
+          <img src="../assets/images/img_whatsapp_image_2026_02_07_136x204.png" alt="CAPER café atmosphere" style="width: 204px; height: 136px;">
+          <img src="../assets/images/img_whatsapp_image_2026_02_07_198x146.png" alt="Food and drinks display" style="width: 146px; height: 198px; position: absolute; bottom: 0; right: 0;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section-with-bg menu-section" id="menu">
+      <div class="section-content">
+        <div class="menu-content">
+          <h2 class="menu-title">MENU</h2>
+          
+          <div class="menu-grid">
+            <article class="menu-item">
+              <img src="../assets/images/img_rectangle_8.png" alt="Tea Jus - refreshing iced tea drink" class="menu-image">
+              <div class="menu-info">
+                <h3 class="menu-name">TEA JUS</h3>
+                <button class="menu-button">lihat Detail</button>
+              </div>
+            </article>
+            
+            <article class="menu-item">
+              <img src="../assets/images/img_rectangle_8_252x242.png" alt="Mie Kuah - Indonesian noodle soup" class="menu-image">
+              <div class="menu-info">
+                <h3 class="menu-name">MIE KUAH</h3>
+                <button class="menu-button">lihat Detail</button>
+              </div>
+            </article>
+            
+            <article class="menu-item">
+              <img src="../assets/images/img_rectangle_8_302x242.png" alt="Es Chocholatos - chocolate iced drink" class="menu-image">
+              <div class="menu-info">
+                <h3 class="menu-name">ES CHOCHOLATOS</h3>
+                <button class="menu-button">lihat Detail</button>
+              </div>
+            </article>
+            
+            <article class="menu-item">
+              <img src="../assets/images/img_rectangle_8_1.png" alt="Mie Goreng - Indonesian fried noodles" class="menu-image">
+              <div class="menu-info">
+                <h3 class="menu-name">MIE GORENG</h3>
+                <button class="menu-button">lihat Detail</button>
+              </div>
+            </article>
+          </div>
+          
+          <button class="menu-scroll-button">Geser untuk melihat lebih banyak menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section class="location-section" id="lokasi">
+      <div class="location-content">
+        <div class="location-info">
+          <div class="info-card">
+            <h3 class="info-title">📍 Alamat:</h3>
+            <p class="info-text">Jl. R. E. Martadinata No.150, Mekarjaya,  Kec. Ciamis, Kabupaten Ciamis, Jawa Barat 46274</p>
+          </div>
+          
+          <div class="contact-grid">
+            <div class="info-card">
+              <h3 class="info-title">📞 Kontak:</h3>
+              <p class="info-text">Instagram : <br><u>@caperunigal_</u></p>
+            </div>
+            
+            <div class="info-card">
+              <h3 class="info-title">🕘 Jam Operasional:</h3>
+              <p class="info-text">Buka : 08.00 WIB<br>Tutup : 17.00 WIB</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3 class="info-title">🗺️ Patokan:</h3>
+            <p class="info-text" style="margin-top: 16px;">Di belakang Perpustakaan Unigal, akses mudah dari area kampus. Mau lihat jalannya?</p>
+            <button class="hero-button" style="margin-top: 6px; margin-left: 12px; font-size: 10px; padding: 6px 22px;">Lihat Video</button>
+          </div>
+        </div>
+        
+        <div class="map-section">
+          <h2 class="map-title">LOKASI & KONTAK</h2>
+          <iframe
+            title="Lokasi CAPER - Caffe Perpustakaan"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=108.3477,-7.3297,108.3497,-7.3277&layer=mapnik"
+            class="map-iframe"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-content">
+          <div class="footer-nav">
+            <div class="footer-logo">caper</div>
+            
+            <div class="footer-nav-item">
+              <span class="footer-nav-text">Home</span>
+              <div class="footer-line" style="margin-right: 18px;"></div>
+            </div>
+            
+            <div class="footer-nav-item">
+              <span class="footer-nav-text">TENTANG</span>
+              <div class="footer-line"></div>
+            </div>
+            
+            <div class="footer-nav-item">
+              <span class="footer-nav-text">SEJARAH</span>
+              <div class="footer-line"></div>
+            </div>
+            
+            <div class="footer-nav-item">
+              <span class="footer-nav-text">MENU</span>
+              <div class="footer-line"></div>
+            </div>
+            
+            <div class="footer-nav-item">
+              <span class="footer-nav-text">LOKASI & KONTAK</span>
+              <div class="footer-line" style="margin-left: 60px;"></div>
+            </div>
+            
+            <img src="../assets/images/img_mdi_instagram.svg" alt="Instagram social media icon" class="footer-social">
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">all right reserved</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.nav-item, .footer-nav-item').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Active navigation state
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${current}`) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Button interactions
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        // Add click animation
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          button.style.transform = '';
+        }, 150);
+      });
+    });
+  </script>
+</body>
+</html>
